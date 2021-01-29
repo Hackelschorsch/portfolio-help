@@ -10,7 +10,7 @@ Portfolio Performance unterstützt Konten und Wertpapiere in Fremdwährungen.
 * Beträge in der Berichtswährung werden üblicherweise ohne Währungskürzel dargestellt (damit die Ansichten nicht unnötig viele Informationen darstellen).
 * Konten und Wertpapiere können in einer Fremdwährung geführt werden. In einem Portfolio können Wertpapiere unterschiedlichster Währung existieren. Ein Wertpapiere ohne Währung wird als *Aktienindex* interpretiert und kann entsprechend nicht gekauft werden.
 * Neben den Wechselkursen der [Europäischen Zentralbank](#referenzwechselkurse-der-europaischen-zentralbank) kann man auch [benutzerdefinierte Wechselkurse](#benutzerdefinierte-wechselkurse) anlegen und - anlog zu Wertpapieren - aus den üblichen Quellen mit Kursen versorgen.
-* Standardmässig rechnet PP bei monetären Beträgen mit 2 Nachkommastellen und bei Wechselkursen mit 4 Nachkommastellen. Wenn der Wechselkurse invertiert wird, rechnet PP mit 10 Nachkommastellen.
+* Standardmässig rechnet PP bei monetären Beträgen mit 2 Nachkommastellen und bei Wechselkursen mit 4 Nachkommastellen. Wenn der Wechselkurs invertiert wird, rechnet PP mit 10 Nachkommastellen.
 * Wechselkurse können in [Mengennotierung oder Preisnotierung](#notierung) dargestellt werden.
 * Beträge in einer Buchung werden - wenn möglich - mit dem Wechselkurs aus der Buchung selbst umgerechnet.
 
@@ -43,9 +43,9 @@ Preisnotierung üblich ist, insbesondere auch in der Schweiz. [Quelle](https://d
 
 ## Währungsrechner
 
-Mit dem Währungsrechner unter *Allgemeine Daten -> Währungen -> Währungsrechner* kann man nachvollziehen welche Wechselkurse PP für eine Umrechnung verwendet.
+Mit dem Währungsrechner unter *Allgemeine Daten -> Währungen -> Währungsrechner* kann man nachvollziehen, welche Wechselkurse PP für eine Umrechnung verwendet.
 
-In diesem Beispiel wird der *Dirham* aus den Vereinige Arabische Emiraten zunächst in *US Doller* und anschliessend in *Euro* umgerechnet.
+In diesem Beispiel wird der *Dirham* aus den Vereinigten Arabischen Emiraten zunächst in *US Dollar* und anschliessend in *Euro* umgerechnet.
 
 <a href="../images/assets/waehrungsrechner.png"><img alt="Währungsrechner" src="../images/assets/waehrungsrechner.png" width="471" style="max-width: 471px;" class="screenshot"/></a>
 
@@ -54,13 +54,13 @@ PP gewichtet Wechselkurse und nutzt zur Umrechnung den Wechselkurs mit dem niedr
 * Benutzerdefinierte Wechselkurse haben ein Gewicht von 1
 * Wechselkurse der EZB haben ein Gewicht von 2
 * Invertierte Wechselkurse (Umkehrkurs) zählen zu dem Gewicht +2 hinzu
-* Eine Kette von Wechselkursen (z.B. USD -> EUR -> CHD) zählt eine Gewicht von +1 hinzu
+* Eine Kette von Wechselkursen (z.B. USD -> EUR -> CHD) zählt ein Gewicht von +1 hinzu
 
-Mit diesen Gewichten wird sichergestellt, dass benutzerdefinierte Wechselkurse von denen der Europäischen Zentralbank genutzt werden. Andrerseits wird ein Wechselkurs der Europäischen Zentralbank dem Umkehrkurs eines benutzerdefinierten Wechselkurses vorgezogen. Ein direkter Wechselkurs wird einer Kette von Wechselkursen vorgezogen die zu der gleichen Umrechnung führen würden.
+Mit diesen Gewichten wird sichergestellt, dass benutzerdefinierte Wechselkurse von denen der Europäischen Zentralbank genutzt werden. Andererseits wird ein Wechselkurs der Europäischen Zentralbank dem Umkehrkurs eines benutzerdefinierten Wechselkurses vorgezogen. Ein direkter Wechselkurs wird einer Kette von Wechselkursen vorgezogen, die zu der gleichen Umrechnung führen würden.
 
 ## Referenzwechselkurse der Europäischen Zentralbank
 
-PP lädt automatisch beim Start die [Referenzwechselkurse der Europäischen Zentralbank (EZB)](https://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html). Damit kennt PP die Wechselkurse aller wichtigen Währungen vom US Dollar über den japanischen Yen, das britischen Pfund bis zum Schweizer Franken.
+PP lädt automatisch beim Start die [Referenzwechselkurse der Europäischen Zentralbank (EZB)](https://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html). Damit kennt PP die Wechselkurse aller wichtigen Währungen vom US Dollar über den japanischen Yen, das britische Pfund bis zum Schweizer Franken.
 
 Laut Webseite werden die Wechselkurse der EZB gegen 16 Uhr aktualisiert:
 
