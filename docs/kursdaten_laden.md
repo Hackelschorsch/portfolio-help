@@ -4,11 +4,11 @@ title: Kursdaten laden
 
 # Kursdaten laden
 
-Historische Kurse sind extrem wichtig um eine Performance berechnen zu können. Wenn man nicht weiß wieviel ein Wertpapier vor einem Jahr wert war, dann helfen auch schicke Formeln nicht weiter. Allerdings ist es nicht einfach an gute und gleichzeitig kostenlose historische Kurse heranzukommen.
+Historische Kurse sind extrem wichtig, um eine Performance berechnen zu können. Wenn man nicht weiß, wieviel ein Wertpapier vor einem Jahr wert war, dann helfen auch schicke Formeln nicht weiter. Allerdings ist es nicht einfach, an gute und gleichzeitig kostenlose historische Kurse heranzukommen.
 
 Die erste Anlaufstelle ist [Yahoo Finance](#yahoo-finance): sofern Yahoo Finance das Wertpapier kennt und auch Kurse hat, kann man bequem anhand des Tickers den Download direkt in PP konfigurieren. Allerdings ist die Abdeckung für deutsche Fonds oder ETFs nicht so prickelnd. Eine weitere Möglichkeit ist [AlphaVantage](#alphavantage): ebenfalls mit viel Gewicht auf den amerikanischen Markt. Allerdings erlaubt das kostenlose API nur wenige Aufrufe pro Minute.
 
-Wenn diese zwei automatischen Quellen keine historischen Kurse bieten, muss man zu "halbautomatischen" Lösungen greifen. Die erste Möglichkeit ist eine URL zu hinterlegen auf der nach einer [Tabelle mit Kursinformationen](#tabelle-auf-einer-webseite) gesucht wird. Neben der Schwierigkeit überhaupt die passende Seite zu finden, kann es auch sein, dass die URLs sich immer wieder ändert so dass man mit Markos [dynamische Kursdaten-URLs](#dynamische-kursdaten-urls) zusammenbauen muss.
+Wenn diese zwei automatischen Quellen keine historischen Kurse bieten, muss man zu "halbautomatischen" Lösungen greifen. Die erste Möglichkeit ist eine URL zu hinterlegen auf der nach einer [Tabelle mit Kursinformationen](#tabelle-auf-einer-webseite) gesucht wird. Neben der Schwierigkeit überhaupt die passende Seite zu finden, kann es auch sein, dass die URL sich immer wieder ändert, so dass man mit Markos [dynamische Kursdaten-URLs](#dynamische-kursdaten-urls) zusammenbauen muss.
 
 Und schließlich bleiben die manuellen Lösungen: die Kursdaten [per CSV-Datei](#csv-import) zu importieren oder manuell im Programm selbst zu erfassen.
 
@@ -134,7 +134,7 @@ https://example.com/data?waehrung={CURRENCY}
 
 ```DATE:<format>``` generiert eine Abfrage für jedes Datum mit dem angegebenen Format, und zwar
 
-* wenn **keine** Kurse existieren, wird vom aktuellen Datum rückwärts in die Vergangenheit gesucht solange bis keine Kurse mehr gefunden werden;
+* wenn **keine** Kurse existieren, wird solange vom aktuellen Datum rückwärts in die Vergangenheit gesucht, bis keine Kurse mehr gefunden werden;
 * wenn historische **Kurse existieren**, dann wird vom letzten Kursdatum vorwärts bis zum aktuellen Datum eine URL generiert.
 
 Das Datumsformat folgt den Regeln des [DateTimeFormatter](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) aus Java. Die wichtigsten Symbole sind ```y``` für das Jahr, ```M``` für den Monat im Jahr und ```d``` für den Tag im Monat.
